@@ -1,0 +1,82 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :town %>
+    <%= form.text_field :town %>
+  </div>
+
+  <div class="field">
+    <%= form.label :region %>
+    <%= form.text_field :region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :population %>
+    <%= form.number_field :population %>
+  </div>
+
+  <div class="field">
+    <%= form.label :supported_sector %>
+    <%= form.text_field :supported_sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :when %>
+    <%= form.date_select :when %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Donar %>
+    <%= form.text_field :Donar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :funded %>
+    <%= form.text_field :funded %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beneficiaries %>
+    <%= form.text_field :beneficiaries %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
