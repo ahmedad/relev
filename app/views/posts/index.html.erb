@@ -34,6 +34,7 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+        <td><%= image_tag post.image.url(:medium) %></td>
         <td><%= post.title %></td>
         <td><%= post.town %></td>
         <td><%= post.region %></td>

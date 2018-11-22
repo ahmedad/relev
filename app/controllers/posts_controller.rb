@@ -63,6 +63,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :town, :region, :population, :supported_sector, :description, :when, :Donar, :funded, :beneficiaries, :status, :latitude, :longitude)
+      params.require(:post).permit(:title, :town, :region, :population, :supported_sector, :description, :when, :Donar, :funded, :beneficiaries, :status, :latitude, :longitude, :image)
     end
 end
